@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+  {{>nav}}
+    <h1>Agregar Notas</h1>
+	<form action="/agregar-nota" method="POST">
+	<div class="mb-3">
+  <label for="nombreTarea" class="form-label">Nombre Tarea</label>
+  <input type="text" class="form-control" id="nombreTarea" name="nombreTarea">
+</div>
+<div class="mb-3">
+  <label for="detallesTarea" class="form-label">Detalles Tarea</label>
+  <input type="text" class="detallesTarea-input" id="detallesTarea" name="detallesTarea">
+</div>
+<button type="submit">Agregar</button>
+<a href="/"><button type="button">Cancelar</button></a>
+</form>
+  </body>
+</html>
+
+

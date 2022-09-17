@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+	{{>nav}}
+    <h1>Inicio Tareas</h1>	
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre Tarea</th>
+      <th scope="col">Detalles Tarea</th>
+	  <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each data}}
+    <tr>
+      <td>{{nombreTarea}}</td>
+      <td>{{detallesTarea}}</td>
+	  <td>
+	  <a href="/editar-nota/{{id}}"><button type="button">Editar</button></a>
+      <a href="/borrar-nota/{{id}}"><button type="button">Eliminar</button></a>
+	 </td>
+    </tr>
+	{{/each}}
+  </tbody>
+</table>
+<a href="/agregar-nota"><button type="button">Agregar Nota</button></a>
+  </body>
+</html>
+  

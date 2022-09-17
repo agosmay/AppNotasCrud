@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   {{>head}}
+  </head>
+  <body>
+	{{>nav}}
+    <h1>Editar Notas</h1>
+	<form action="/editar-nota/{{data.id}}" method="POST">
+	<div>
+  <label for="nombreTarea"  class="nombreTarea">Tarea : </label>
+  <input type="text" class="nombreTarea-input" id="nombreTarea" value={{data.nombreTarea}} name="nombreTarea">
+</div>
+<div >
+  <label for="cuerpoTarea" class="cuerpoTarea">Detalles Tarea : </label>
+  <input type="text" class="detallesTarea-input" id="detallesTarea" value={{data.detallesTarea}} name="detallesTarea">
+</div>
+<button type="submit">Editar Nota</button>
+<a href="/"><button type="button">Cancelar</button></a>
+</form>
+  </body>
+</html>
+
+
